@@ -46,6 +46,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
     bar: {},
     pie: {},
     donut: {},
+    gauge: {},
 
     /**
     Grid lines
@@ -106,7 +107,6 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         if (Ember.isEqual(self.get('_chart'), undefined)) {
             // Empty, create it.
             var container = self.get('element');
-            console.log(container);
             if (Ember.isEqual(container, undefined)) {
                 return undefined;
             } else {
@@ -133,6 +133,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
             'bar',
             'pie',
             'donut',
+            'gauge',
             'grid',
             'legend',
             'tooltip',
@@ -152,6 +153,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         'bar',
         'pie',
         'donut',
+        'gauge',
         'grid',
         'legend',
         'tooltip',
