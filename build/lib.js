@@ -106,7 +106,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         var self = this;
         if (Ember.isEqual(self.get('_chart'), undefined)) {
             // Empty, create it.
-            var container = self.get('element');
+            var container = self.element;
             if (Ember.isEqual(container, undefined)) {
                 return undefined;
             } else {
@@ -119,7 +119,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
             // Editor is already created and cached.
             return self.get('_chart');
         }
-    }.property('element', '_config'),
+    }.property('_config'),
 
     /**
 
@@ -144,9 +144,9 @@ Ember.C3.ChartComponent = Ember.Component.extend({
             'color',
             'transition'
         ]);
-        c.bindto = self.get('element');
+        c.bindto = self.element;
         return c;
-    }.property('element',
+    }.property(
         'data',
         'axis',
         'regions',
@@ -176,6 +176,5 @@ Ember.C3.ChartComponent = Ember.Component.extend({
 });
 
 Ember.Handlebars.helper('c3-chart', Ember.C3.ChartComponent);
-
 
 })();
