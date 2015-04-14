@@ -73,6 +73,8 @@ Ember.C3.ChartComponent = Ember.Component.extend({
     */
     zoom: {},
 
+    point: {},
+
     /**
     Size
     */
@@ -139,6 +141,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
             'tooltip',
             'subchart',
             'zoom',
+            'point',
             'size',
             'padding',
             'color',
@@ -159,6 +162,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         'tooltip',
         'subchart',
         'zoom',
+        'point',
         'size',
         'padding',
         'color',
